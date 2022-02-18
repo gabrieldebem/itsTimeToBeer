@@ -2,7 +2,7 @@ import express, { Application, Request, Response } from "express";
 import cors from "cors";
 
 const app: Application = express();
-const port = 4000;
+const port = process.env.PORT;
 
 // Body parsing Middleware
 app.use(express.json());
