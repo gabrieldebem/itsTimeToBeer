@@ -10,8 +10,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+const whiteList = {
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200
+};
+
 app.get(
     "/",
+    cors(whiteList),
     async (req: Request, res: Response): Promise<Response> => {
         const value = Math.floor(Math.random() * 2);
 
