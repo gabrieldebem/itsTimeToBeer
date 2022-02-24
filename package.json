@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "dev": "ts-node ./index.ts",
-    "start": "node ./index.ts"
+    "start": "node ./dist/index.js"
   },
   "keywords": [
     "typescript",
